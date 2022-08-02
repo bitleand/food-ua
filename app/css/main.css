@@ -1,5 +1,8 @@
 /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */
 .header {
+  padding: 45px 0;
+}
+.header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,22 +13,21 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  height: 150px;
-  padding: 0 100px;
 }
 .header__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-width: 550px;
+  max-width: 650px;
+  width: 100%;
 }
-.header-logo {
-  max-width: 170px;
-}
-.header__links {
+.header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,25 +35,27 @@
   -ms-flex-align: center;
   align-items: center;
 }
-.header__link {
-  position: relative;
-  margin-right: 45px;
-  font-weight: bold;
+.header-nav__link {
+  font-weight: 700;
   font-size: 18px;
   color: #303030;
+  position: relative;
+  margin-right: 45px;
 }
-.header__link:after {
-  content: "";
+.header-nav__link:after {
+  left: 0;
+  right: auto;
+  bottom: 2px;
+  top: auto;
   position: absolute;
-  display: block;
-  width: 110%;
-  left: -5%;
-  bottom: -1px;
-  z-index: -1;
+  content: "";
+  width: 100%;
   height: 8px;
   background: #54ED39;
+  display: block;
+  z-index: -1;
 }
-.header__link:last-child {
+.header-nav__link:last-child {
   margin-right: 0;
 }
 
@@ -175,7 +179,7 @@ a {
 
 /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */
 [class*=__container] {
-  max-width: 1222px;
+  max-width: 1700px;
   max-height: inherit;
   padding: 0 15px;
   margin: 0 auto;
@@ -209,5 +213,29 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.btn {
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-radius: 0;
+  border-width: 1px;
+  max-width: 220px;
+  max-height: 65px;
+  width: 100vh;
+  height: 100vh;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.btn-fill--white {
+  background-color: #ffffff;
+}
+.btn-fill__text {
+  font-weight: 700;
+  font-size: 18px;
+  color: #303030;
 }
 /*# sourceMappingURL=main.css.map */

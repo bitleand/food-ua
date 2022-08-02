@@ -2,47 +2,42 @@
 @import 'mixins';
 
 .header {
-  @include flexCenterBet;
-  @include wh(100%, 150px);
+  padding: 45px 0;
 
-  padding: 0 100px;
+  &__container {
+    @include flexCenterBet;
+
+    width: 100%;
+  }
 
   &__block {
-    display: flex;
-    justify-content: space-between;
-    min-width: 550px;
+    @include flexCenterBet;
+
+    max-width: 650px;
+    width: 100%;
   }
 
-  &-logo {
-    max-width: 170px;
-  }
+  &-nav {
+    @include flexCenterV;
 
-  &__links {
-    display: flex;
-    align-items: center;
-  }
+    &__link {
+      @include text(700, 18px, $dark);
 
-  &__link {
-    position: relative;
-    margin-right: 45px;
-    font-weight: bold;
-    font-size: 18px;
-    color: $dark;
+      position: relative;
+      margin-right: 45px;
 
-    &:after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 110%;
-      left: -5%;
-      bottom: -1px;
-      z-index: -1;
-      height: 8px;
-      background: $brightGreen;
-    }
+      &:after {
+        @include position(0, auto, 2px, auto, absolute);
+        @include wh(100%, 8px);
 
-    &:last-child {
-      margin-right: 0;
+        background: $brightGreen;
+        display: block;
+        z-index: -1;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
