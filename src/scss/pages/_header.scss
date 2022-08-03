@@ -4,8 +4,10 @@
 .header {
   padding: 45px 0;
 
-  &__container {
+  &__wrapper {
     @include flexCenterBet;
+
+    padding: 0 65px;
   }
 
   &__block {

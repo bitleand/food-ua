@@ -2,7 +2,7 @@
 .header {
   padding: 45px 0;
 }
-.header__container {
+.header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +12,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding: 0 65px;
 }
 .header__block {
   display: -webkit-box;
@@ -179,7 +180,7 @@ a {
 
 /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */
 [class*=__container] {
-  max-width: 1770px;
+  max-width: 1180px;
   max-height: inherit;
   padding: 0 25px;
   margin: 0 auto;
@@ -208,6 +209,19 @@ a {
   font-weight: 700;
   font-size: 18px;
   color: #303030;
+}
+
+.bg--blue {
+  left: auto;
+  right: 0;
+  bottom: auto;
+  top: -155px;
+  position: absolute;
+  content: "";
+  width: 50vw;
+  height: 900px;
+  background: rgba(146, 242, 255, 0.15);
+  z-index: -1;
 }
 
 .sidebar {
@@ -270,5 +284,88 @@ a {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+.tab {
+  padding: 28px 0 100px;
+  position: relative;
+}
+.tab-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+.tab-group__subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  color: #303030;
+  margin: 35px 0 0;
+}
+.tab-content {
+  max-width: 850px;
+  max-height: 545px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.tab-content__img {
+  height: 100%;
+}
+.tab-content__text {
+  font-weight: 300;
+  font-size: 24px;
+  color: #303030;
+  line-height: 36px;
+  letter-spacing: auto;
+  left: auto;
+  right: -180px;
+  bottom: -130px;
+  top: auto;
+  position: absolute;
+  content: "";
+  max-width: 550px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  width: 100%;
+  height: auto;
+  background: rgba(251, 254, 93, 0.8);
+  padding: 50px;
+}
+.tab-menu {
+  width: 280px;
+  padding: 35px 30px;
+  background-color: #fff;
+}
+.tab-menu__subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: #303030;
+}
+.tab-menu__list {
+  margin-top: 35px;
+  padding-left: 25px;
+  border-left: 1px solid #303030;
+}
+.tab-menu__item {
+  font-weight: 300;
+  font-size: 18px;
+  color: #303030;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.tab-menu__item--active {
+  font-weight: 700;
+  font-size: 22px;
+  color: #303030;
+}
+.tab-menu__item:first-child {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */

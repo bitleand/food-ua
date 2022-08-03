@@ -1,0 +1,70 @@
+.tab {
+  padding: 28px 0 100px;
+  position: relative;
+
+  &-group {
+    display: flex;
+    margin: 0 auto;
+    box-shadow: $boxShadowTab;
+
+    &__subtitle {
+      @include text(700, 20px, $dark);
+
+      margin: 35px 0 0;
+    }
+  }
+
+  &-content {
+    @include maxWmaxH(850px, 545px);
+    @include wh(100%, 100vh);
+
+    position: relative;
+
+    &__img {
+      height: 100%;
+    }
+
+    &__text {
+      @include text(300, 24px, $dark);
+      @include lineHletterS(36px, auto);
+      @include position(auto, -180px, -130px, auto, absolute);
+      @include maxWmaxH(550px, fit-content);
+      @include wh(100%, auto);
+
+      background: $yellowRGBA;
+      padding: 50px;
+    }
+  }
+
+  &-menu {
+    width: 280px;
+    padding: 35px 30px;
+    background-color: #fff;
+
+    &__subtitle {
+      @include text(700, 16px, $dark);
+    }
+
+    &__list {
+      margin-top: 35px;
+      padding-left: 25px;
+      border-left: 1px solid $dark;
+    }
+
+    &__item {
+      @include text(300, 18px, $dark);
+
+      transition: 0.3s all ease-in-out;
+      margin-top: 10px;
+      cursor: pointer;
+
+      &--active {
+        @include text(700, 22px, $dark);
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+}
