@@ -36,4 +36,22 @@
       @include imgSprite(38px, 5px, $black, cover);
     }
   }
+
+  &-choose {
+    @include maxWmaxH(170px, 50px);
+    @include wh(100%, 100vh);
+
+    box-shadow: $boxShadowBlack;
+    background-color: $white;
+    transition: 0.3s all;
+
+    &--max-width {
+      max-width: 210px;
+    }
+
+    &--active {
+      color: $white;
+      background-color: $brightGreen;
+    }
+  }
 }

@@ -8,4 +8,8 @@
 
 .title {
   @include text(400, 36px, $dark);
+
+  &--center {
+    text-align: center;
+  }
 }

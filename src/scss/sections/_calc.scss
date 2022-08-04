@@ -1,0 +1,77 @@
+.calc {
+  padding: 50px 0;
+
+  &-content {
+    margin-top: 50px;
+    background: rgba(146, 242, 255, 0.15);
+    padding: 30px;
+
+    &__subtitle {
+      @include text(700, 18px, $black);
+
+      text-align: center;
+    }
+
+    &__line {
+      @include maxWmaxH(490px, auto);
+      @include wh(100vw, 1px);
+
+      background-color: $brdrClrBlack;
+      margin: 40px auto;
+      display: block;
+    }
+  }
+
+  &-choose {
+    @include flexCenterH;
+
+    justify-content: space-between;
+    position: relative;
+    margin: 30px auto;
+
+    &__input {
+      @include maxWmaxH(225px, 50px);
+      @include wh(100%, 100vh);
+
+      box-shadow: $boxShadowBlack;
+      background-color: $white;
+      transition: 0.3s all;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    &--gender {
+      justify-content: center;
+
+      &::after {
+        @include position(auto, auto, auto, 50%, absolute);
+        @include wh(16px, 16px);
+
+        background-image: url('../svg/switch.svg') center (center / cover) no-repeat;
+        transform: translateY(-50%);
+        display: block;
+      }
+    }
+
+    &--inputs {
+      @include widthMaxW(100%, 745px);
+    }
+
+    &--buttons {
+      @include widthMaxW(100%, 930px);
+    }
+  }
+
+  &-total {
+    @include text(700, 18px, $black);
+    @include flexCenterBet;
+
+    margin: 0 auto;
+
+    &__result {
+      &--num {
+        font-size: 42px;
+      }
+    }
+  }
+}

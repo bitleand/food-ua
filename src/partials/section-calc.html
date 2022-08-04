@@ -1,0 +1,43 @@
+<div class="calc__container">
+  <h2 class="title title--center">Розрахуємо вашу потребу у калоріях?</h2>
+  <div class="calc-content">
+    <h4 class="calc-content__subtitle">Ваша стать</h4>
+    <div class="calc-choose calc-choose--gender">
+      <button id="calcWoman" type="button" class="btn-choose btn-choose--active">
+        <span class="btn-choose__text">Жінка</span>
+      </button>
+      <button id="calcMan" type="button" class="btn-choose">
+        <span class="btn-choose__text">Чоловік</span>
+      </button>
+    </div>
+    <h4 class="calc-content__subtitle">Ваша конституція</h4>
+    <div class="calc-choose calc-choose--inputs">
+      <input type="text" id="calcHeight" placeholder="Введіть зростання" class="calc-choose__input">
+      <input type="text" id="calcWeight" placeholder="Введіть вагу" class="calc-choose__input">
+      <input type="text" id="calcAge" placeholder="Введіть вік" class="calc-choose__input">
+    </div>
+    <h4 class="calc-content__subtitle">Виберіть вашу фізичну активність</h4>
+    <div class="calc-choose calc-choose--buttons">
+      <button id="calcLow" type="button" class="btn-choose btn-choose--max-width btn-choose--active">
+        Низька активність
+      </button>
+      <button id="calcSmall" type="button" class="btn-choose btn-choose--max-width">
+        Невисока активність
+      </button>
+      <button id="calceMedium" type="button" class="btn-choose btn-choose--max-width">
+        Помірна активність
+      </button>
+      <button id="calcHigh" type="button" class="btn-choose btn-choose--max-width">
+        Висока активність
+      </button>
+    </div>
+    <span class="calc-content__line"></span>
+    <div class="calc-total">
+      <h4 class="calc-total__subtitle">Ваша добова норма калорій:</h4>
+      <p class="calc-total__result">
+        <span class="calc-total__result--num">0</span>
+        ккал
+      </p>
+    </div>
+  </div>
+</div>

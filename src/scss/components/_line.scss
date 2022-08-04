@@ -1,6 +1,8 @@
 .line {
-  @include wh(330px, 1px);
+  @include maxWmaxH(330px, auto);
+  @include wh(100%, 1px);
 
   background-color: $brdrClrBlack;
+  display: block;
   margin: 0 auto;
 }
