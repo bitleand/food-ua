@@ -8,10 +8,18 @@
     background: $bgLightBlue;
   }
 
-  &--yellow {
+  &--light-yellow {
     @include position(0, 0, 0, 50px, absolute);
     @include wh(1110px, 870px);
 
     background: $bgLightYellow;
+  }
+
+  &--yellow {
+    background: rgba(249, 254, 126, 0.25);
+
+    margin-top: 50px;
+    padding: 50px 0;
+    width: 100%;
   }
 }

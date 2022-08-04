@@ -1,0 +1,61 @@
+.cards {
+  padding: 40px 0 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.card {
+  @include heightMinH(100vh, 450px);
+  @include widthMaxW(100%, 320px);
+
+  box-shadow: $boxShadowTab;
+  background-color: $white;
+
+  font-size: 16px;
+  font-weight: 300;
+
+  &-content {
+    &__img {
+      @include imgSprite(100%, 200px, none, cover);
+    }
+
+    &__subtitle {
+      @include text(700, 18px, $black);
+
+      padding: 10px 20px;
+    }
+
+    &__text {
+      @include text(300, 16px, $dark);
+
+      padding: 10px 20px;
+      opacity: 0.8;
+    }
+
+    border-bottom: 1px solid $brdrBottomCard;
+  }
+
+  &-price {
+    @include flexCenterBet;
+
+    padding: 10px 20px;
+
+    &__subtitle {
+      @include text(300, 16px, $dark);
+
+      opacity: 0.8;
+    }
+
+    &__total {
+      @include text(300, 16px, $dark);
+
+      &--num {
+        @include text(700, 24px, $black);
+      }
+    }
+  }
+}
