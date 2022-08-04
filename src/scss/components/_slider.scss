@@ -1,0 +1,39 @@
+.slider {
+  @include flexColEnd;
+
+  &-counter {
+    @include flexCenterV;
+
+    &__current {
+      @include text(700, 48px, $black);
+
+      margin-left: 10px;
+    }
+
+    &__total {
+      @include text(400, 24px, $dark);
+
+      position: relative;
+      margin: 0 10px;
+      opacity: 0.7;
+
+      &::before {
+        @include position(auto, 32px, 0, 0, absolute);
+
+        content: '/';
+      }
+    }
+  }
+
+  &-el {
+    @include maxWmaxH(690px, 390px);
+    @include wh(100vw, 100vh);
+
+    box-shadow: $boxShadowTab;
+    margin-top: 15px;
+
+    &__img {
+      @include imgSprite(100%, 100%, none, cover);
+    }
+  }
+}

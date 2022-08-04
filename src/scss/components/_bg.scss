@@ -1,9 +1,17 @@
 .bg {
+  z-index: -1;
+
   &--blue {
     @include position(auto, 0, auto, -155px, absolute);
     @include wh(50vw, 900px);
 
     background: $bgLightBlue;
-    z-index: -1;
+  }
+
+  &--yellow {
+    @include position(0, 0, 0, 50px, absolute);
+    @include wh(1110px, 870px);
+
+    background: $bgLightYellow;
   }
 }

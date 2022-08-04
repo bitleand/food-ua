@@ -1,0 +1,6 @@
+.line {
+  @include wh(330px, 1px);
+
+  background-color: $brdrClrBlack;
+  margin: 0 auto;
+}

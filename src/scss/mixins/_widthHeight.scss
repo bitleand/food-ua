@@ -12,3 +12,23 @@
   min-width: $minW;
   min-height: $minH;
 }
+
+@mixin widthMaxW($width, $maxW) {
+  width: $width;
+  max-width: $maxW;
+}
+
+@mixin heightMaxH($height, $maxH) {
+  width: $height;
+  max-height: $maxH;
+}
+
+@mixin widthMinW($width, $minW) {
+  width: $width;
+  min-width: $minW;
+}
+
+@mixin heightMinH($height, $minH) {
+  width: $height;
+  min-height: $minH;
+}

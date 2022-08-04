@@ -9,10 +9,31 @@
   &-fill{
     &--white {
       background-color: $white;
+
+      &__text {
+        @include text(700, 18px, $dark);
+      }
     }
 
-    &__text {
-      @include text(700, 18px, $dark);
+    &--dark {
+      background-color: $dark;
+      border: none;
+
+      &__text {
+        @include text(700, 18px, $white);
+      }
+    }
+  }
+
+  &-arrow {
+    @include maxWmaxH(38px, 30px);
+    @include flexCenterV;
+
+    box-shadow: none;
+    border: none;
+
+    &__img {
+      @include imgSprite(38px, 5px, $black, cover);
     }
   }
 }

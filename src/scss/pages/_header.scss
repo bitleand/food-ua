@@ -12,9 +12,7 @@
 
   &__block {
     @include flexCenterBet;
-
-    max-width: 650px;
-    width: 100%;
+    @include widthMaxW(100%, 740px);
   }
 
   &-nav {

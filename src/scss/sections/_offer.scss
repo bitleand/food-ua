@@ -1,0 +1,35 @@
+.offer {
+  padding: 100px 0;
+  position: relative;
+
+  &__container {
+    @include flexCenterBet;
+  }
+
+  &-content {
+    @include widthMaxW(100%, 580px);
+
+    &__subtitle {
+      @include text(700, 20px, $dark);
+
+      margin-top: 20px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__text {
+      @include text(300, 18px, $dark);
+      @include lineHletterS(24px, auto);
+
+      margin-top: 25px;
+    }
+
+    &--max-width {
+      @include widthMaxW(100%, 330px);
+
+      margin-top: 70px;
+    }
+  }
+}
