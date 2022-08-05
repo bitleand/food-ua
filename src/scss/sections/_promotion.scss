@@ -1,0 +1,34 @@
+.promotion {
+  padding: 70px 0 240px 0;
+  position: relative;
+
+  &__bg {
+    @include position(0, auto, auto, -50px, absolute);
+    @include wh(50%, 500px);
+
+    z-index: -1;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &-content {
+    width: 50%;
+
+    &__text {
+      @include lineHletterS(24px, auto);
+      @include text(300, 20px, $dark);
+
+      margin-top: 40px;
+
+      &--num {
+        @include text(700, 26px, $black);
+      }
+    }
+  }
+
+  &__timer {
+    width: 50%;
+  }
+}

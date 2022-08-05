@@ -195,6 +195,9 @@ a {
 .title--center {
   text-align: center;
 }
+.title--right {
+  text-align: right;
+}
 
 .btn {
   border-color: rgba(0, 0, 0, 0.2);
@@ -280,7 +283,7 @@ a {
   content: "";
   width: 50vw;
   height: 900px;
-  background: rgba(146, 242, 255, 0.15);
+  background-color: rgba(146, 242, 255, 0.15);
 }
 .bg--light-yellow {
   left: 0;
@@ -291,10 +294,10 @@ a {
   content: "";
   width: 1110px;
   height: 870px;
-  background: rgba(243, 255, 222, 0.45);
+  background-color: rgba(243, 255, 222, 0.45);
 }
 .bg--yellow {
-  background: rgba(249, 254, 126, 0.25);
+  background-color: rgba(249, 254, 126, 0.25);
   margin-top: 50px;
   padding: 50px 0;
   width: 100%;
@@ -368,6 +371,42 @@ a {
   fill: none;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.timer {
+  margin-top: 60px;
+  padding-left: 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.timer-list {
+  max-width: 102px;
+  max-height: 120px;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+}
+.timer-list__subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  color: #303030;
+  text-align: center;
+}
+.timer-list__subtitle--num {
+  font-weight: 700;
+  font-size: 56px;
+  color: #000000;
+  margin: 20px 0 5px;
+  display: block;
 }
 
 .sidebar {
@@ -761,5 +800,45 @@ a {
   text-align: center;
   padding: 0 20px;
   outline: none;
+}
+
+.promotion {
+  padding: 70px 0 240px 0;
+  position: relative;
+}
+.promotion__bg {
+  left: 0;
+  right: auto;
+  bottom: auto;
+  top: -50px;
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 500px;
+  z-index: -1;
+}
+.promotion__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.promotion-content {
+  width: 50%;
+}
+.promotion-content__text {
+  line-height: 24px;
+  letter-spacing: auto;
+  font-weight: 300;
+  font-size: 20px;
+  color: #303030;
+  margin-top: 40px;
+}
+.promotion-content__text--num {
+  font-weight: 700;
+  font-size: 26px;
+  color: #000000;
+}
+.promotion__timer {
+  width: 50%;
 }
 /*# sourceMappingURL=main.css.map */

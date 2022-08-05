@@ -5,18 +5,18 @@
     @include position(auto, 0, auto, -155px, absolute);
     @include wh(50vw, 900px);
 
-    background: $bgLightBlue;
+    background-color: $bgLightBlue;
   }
 
   &--light-yellow {
     @include position(0, 0, 0, 50px, absolute);
     @include wh(1110px, 870px);
 
-    background: $bgLightYellow;
+    background-color: $bgLightYellow;
   }
 
   &--yellow {
-    background: rgba(249, 254, 126, 0.25);
+    background-color: rgba(249, 254, 126, 0.25);
 
     margin-top: 50px;
     padding: 50px 0;
