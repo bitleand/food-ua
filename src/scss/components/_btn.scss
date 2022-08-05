@@ -1,6 +1,6 @@
 .btn {
   @include border($brdrClrBlack, solid, 0, 1px);
-  @include maxWmaxH(220px, 65px);
+  @include maxWmaxH(220px, 50px);
   @include wh(100vh, 100vh);
 
   box-shadow: $boxShadowBlack;
