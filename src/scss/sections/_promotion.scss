@@ -3,8 +3,8 @@
   position: relative;
 
   &__bg {
-    @include position(0, auto, auto, -50px, absolute);
-    @include wh(50%, 500px);
+    @include position(0, auto, auto, 40px, absolute);
+    @include wh(50%, 400px);
 
     z-index: -1;
   }

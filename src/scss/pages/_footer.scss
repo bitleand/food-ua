@@ -1,0 +1,30 @@
+.footer {
+  min-height: 180px;
+  background-color: $dark;
+  padding: 45px 0 50px;
+
+  &-content {
+    @include flexBetweenH;
+
+    &__img {
+      @include imgSprite(42px, 42px, none, cover);
+    }
+  }
+
+  &-about {
+    &__subtitle {
+      @include text(400, 20px, $white);
+    }
+
+    &__link {
+      @include text(400, 16px, $white);
+
+      margin-top: 15px;
+      display: block;
+    }
+
+    &--right {
+      text-align: right;
+    }
+  }
+}
