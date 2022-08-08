@@ -1,0 +1,4 @@
+@mixin bgcShadow($bgc, $shadow) {
+  background-color: $bgc;
+  box-shadow: $shadow;
+}

@@ -51,7 +51,7 @@
   content: "";
   width: 100%;
   height: 8px;
-  background: #54ED39;
+  background-color: #54ED39;
   display: block;
   z-index: -1;
 }
@@ -235,6 +235,37 @@ a {
   text-align: right;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .btn {
   border-color: rgba(0, 0, 0, 0.2);
   border-style: solid;
@@ -288,13 +319,13 @@ a {
   object-fit: cover;
 }
 .btn-choose {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 170px;
   max-height: 50px;
   width: 100%;
   height: 100vh;
-  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
@@ -410,26 +441,26 @@ a {
 }
 
 .timer {
-  margin-top: 60px;
-  padding-left: 95px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 60px;
+  padding-left: 95px;
 }
 .timer-list {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   max-width: 102px;
   max-height: 120px;
   width: 100vw;
   height: 100vh;
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  background-color: #ffffff;
 }
 .timer-list__subtitle {
   font-weight: 300;
@@ -553,13 +584,14 @@ a {
   max-height: fit-content;
   width: 100%;
   height: auto;
-  background: rgba(251, 254, 93, 0.8);
+  background-color: rgba(251, 254, 93, 0.8);
   padding: 50px;
 }
 .tab-menu {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   padding: 35px 30px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .tab-menu__subtitle {
   font-weight: 700;
@@ -636,8 +668,8 @@ a {
   padding: 50px 0;
 }
 .calc-content {
+  background-color: rgba(146, 242, 255, 0.15);
   margin-top: 50px;
-  background: rgba(146, 242, 255, 0.15);
   padding: 30px;
 }
 .calc-content__subtitle {
@@ -669,13 +701,13 @@ a {
   margin: 30px auto;
 }
 .calc-choose__input {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 225px;
   max-height: 50px;
   width: 100%;
   height: 100vh;
-  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
@@ -736,24 +768,24 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .card {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   width: 100vh;
   min-height: 450px;
   width: 100%;
   max-width: 320px;
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  background-color: #ffffff;
-  font-size: 16px;
   font-weight: 300;
+  font-size: 16px;
 }
 .card-content {
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -824,18 +856,15 @@ a {
   padding: 0 100px;
 }
 .order-form__input {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 280px;
   max-height: 50px;
   width: 100vw;
   height: 100vh;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  border: none;
-  font-size: 18px;
   text-align: center;
-  padding: 0 20px;
-  outline: none;
+  font-size: 18px;
 }
 
 .promotion {

@@ -28,7 +28,7 @@
         @include position(0, auto, 2px, auto, absolute);
         @include wh(100%, 8px);
 
-        background: $brightGreen;
+        background-color: $brightGreen;
         display: block;
         z-index: -1;
       }

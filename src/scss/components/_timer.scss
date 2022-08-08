@@ -1,16 +1,13 @@
 .timer {
+  @include flexCenterBet;
+
   margin-top: 60px;
   padding-left: 95px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &-list {
+    @include bgcShadow($white, $boxShadowTab);
     @include maxWmaxH(102px, 120px);
     @include wh(100vw, 100vh);
-
-    box-shadow: $boxShadowTab;
-    background-color: $white;
 
     &__subtitle {
       @include text(300, 16px, $dark);

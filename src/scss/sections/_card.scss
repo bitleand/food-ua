@@ -2,21 +2,17 @@
   padding: 40px 0 50px;
 
   &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    @include flexStartBet;
   }
 }
 
 .card {
+  @include bgcShadow($white, $boxShadowTab);
   @include heightMinH(100vh, 450px);
   @include widthMaxW(100%, 320px);
 
-  box-shadow: $boxShadowTab;
-  background-color: $white;
-
-  font-size: 16px;
   font-weight: 300;
+  font-size: 16px;
 
   &-content {
     &__img {

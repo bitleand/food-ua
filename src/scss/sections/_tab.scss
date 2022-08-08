@@ -31,15 +31,16 @@
       @include maxWmaxH(550px, fit-content);
       @include wh(100%, auto);
 
-      background: $yellowRGBA;
+      background-color: $yellowRGBA;
       padding: 50px;
     }
   }
 
   &-menu {
-    width: 280px;
+    @include widthMaxW(100%, 280px);
+
     padding: 35px 30px;
-    background-color: #fff;
+    background-color: $white;
 
     &__subtitle {
       @include text(700, 16px, $dark);
