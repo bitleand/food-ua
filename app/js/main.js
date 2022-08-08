@@ -11,6 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tab__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/tab */ "./src/js/components/tab.js");
 /* harmony import */ var _components_tab__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_tab__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_timer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/timer */ "./src/js/components/timer.js");
+/* harmony import */ var _components_timer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_timer__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -60,6 +63,55 @@ const clickTabItem = () => {
 hideTabContent();
 showTabContent();
 clickTabItem();
+
+/***/ }),
+
+/***/ "./src/js/components/timer.js":
+/*!************************************!*\
+  !*** ./src/js/components/timer.js ***!
+  \************************************/
+/***/ (() => {
+
+const deadline = '2022-10-15';
+
+const getTimeDeadline = end => {
+  const time = Date.parse(end) - Date.parse(new Date()),
+        days = Math.floor(time / (1000 * 60 * 60 * 24)),
+        hours = Math.floor(time / (1000 * 60 * 60) % 24),
+        minutes = Math.floor(time / (1000 / 60) % 60),
+        seconds = Math.floor(time / 1000 % 60);
+  return {
+    'total': time,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+};
+
+const getZero = num => num >= 0 && num < 10 ? "0".concat(num) : num;
+
+const setClock = end => {
+  const days = document.querySelector('#timerDays'),
+        hours = document.querySelector('#timerHours'),
+        minutes = document.querySelector('#timerMinutes'),
+        seconds = document.querySelector('#timerSeconds');
+
+  const updateClock = () => {
+    const time = getTimeDeadline(end);
+    days.innerHTML = getZero(time.days);
+    hours.innerHTML = getZero(time.hours);
+    minutes.innerHTML = getZero(time.minutes);
+    seconds.innerHTML = getZero(time.seconds);
+    time.total <= 0 ? clearInterval(interval) : false;
+  };
+
+  updateClock();
+  const interval = setInterval(updateClock, 1000);
+};
+
+getTimeDeadline();
+setClock(deadline);
 
 /***/ })
 
