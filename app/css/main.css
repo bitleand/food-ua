@@ -780,8 +780,6 @@ a {
   background-color: #ffffff;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  width: 100vh;
-  min-height: 450px;
   width: 100%;
   max-width: 320px;
   font-weight: 300;
@@ -801,12 +799,18 @@ a {
   font-weight: 700;
   font-size: 18px;
   color: #000000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   padding: 10px 20px;
 }
 .card-content__text {
+  width: 100%;
+  max-height: 155px;
   font-weight: 300;
   font-size: 16px;
   color: #303030;
+  display: -webkit-box;
+  display: block;
+  overflow: scroll;
   padding: 10px 20px;
   opacity: 0.8;
 }

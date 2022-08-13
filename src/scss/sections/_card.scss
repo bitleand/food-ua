@@ -8,7 +8,6 @@
 
 .card {
   @include bgcShadow($white, $boxShadowTab);
-  @include heightMinH(100vh, 450px);
   @include widthMaxW(100%, 320px);
 
   font-weight: 300;
@@ -22,12 +21,18 @@
     &__subtitle {
       @include text(700, 18px, $black);
 
+      border-bottom: 1px solid $brdrBottomCard;
       padding: 10px 20px;
     }
 
     &__text {
+      @include heightMaxH(100%, 155px);
       @include text(300, 16px, $dark);
 
+      display: -webkit-box;
+
+      display: block;
+      overflow: scroll;
       padding: 10px 20px;
       opacity: 0.8;
     }
