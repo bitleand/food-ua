@@ -451,13 +451,12 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 60px;
-  padding-left: 95px;
 }
 .timer-list {
   background-color: #ffffff;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  max-width: 102px;
+  max-width: none;
   max-height: 120px;
   width: 100vw;
   height: 100vh;
@@ -472,8 +471,11 @@ a {
   font-weight: 700;
   font-size: 56px;
   color: #000000;
-  margin: 20px 0 5px;
+  margin: 20px 8px 5px;
   display: block;
+}
+.timer-list:not(:last-child) {
+  margin-right: 20px;
 }
 
 .sidebar {
@@ -908,6 +910,7 @@ a {
   color: #000000;
 }
 .promotion__timer {
+  padding-left: 45px;
   width: 50%;
 }
 /*# sourceMappingURL=main.css.map */

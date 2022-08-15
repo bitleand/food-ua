@@ -2,11 +2,10 @@
   @include flexCenterBet;
 
   margin-top: 60px;
-  padding-left: 95px;
 
   &-list {
     @include bgcShadow($white, $boxShadowTab);
-    @include maxWmaxH(102px, 120px);
+    @include maxWmaxH(none, 120px);
     @include wh(100vw, 100vh);
 
     &__subtitle {
@@ -17,9 +16,13 @@
       &--num {
         @include text(700, 56px, $black);
 
-        margin: 20px 0 5px;
+        margin: 20px 8px 5px;
         display: block;
       }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
     }
   }
 }
