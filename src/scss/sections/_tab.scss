@@ -66,6 +66,10 @@
       &:first-child {
         margin: 0;
       }
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
