@@ -1,0 +1,44 @@
+.modal {
+  @include position(0, 0, 0, 0, fixed);
+  @include maxWmaxH(100%, 100%);
+
+  background-color: $bgModalBlack;
+  z-index: 10;
+
+  &__content {
+    @include border($brdrClrBlack, solid, 4px, 1px);
+    @include widthMaxW(100%, 500px);
+
+    width: 100%;
+    padding: 40px;
+    margin: 28vh auto;
+    position: relative;
+    background-color: $white;
+  }
+
+  &-form {
+    &__close {
+      @include position(auto, 14px, auto, 8px, absolute);
+
+      font-size: 30px;
+      opacity: 0.5;
+    }
+
+    &__title {
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+
+    &__input {
+      @include bgcShadow($white, $boxShadowBlack);
+      @include wh(280px, 50px);
+
+      border: none;
+      display: block;
+      font-size: 18px;
+      text-align: center;
+      margin: 20px auto 20px auto;
+      padding: 0 20px;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 .btn {
+  @include bgcShadow(transparent, $boxShadowBlack);
   @include border($brdrClrBlack, solid, 0, 1px);
   @include maxWmaxH(220px, 50px);
   @include wh(100vh, 100vh);
 
-  box-shadow: $boxShadowBlack;
-  transition: 0.3s all;
+  transition: all 0.3s ease-in-out;
 
   &-fill{
     &--white {
@@ -22,6 +22,12 @@
       &__text {
         @include text(700, 18px, $white);
       }
+    }
+
+    &--modal {
+      display: block;
+      margin: 0 auto;
+      max-width: 280px;
     }
   }
 
@@ -42,7 +48,7 @@
     @include maxWmaxH(170px, 50px);
     @include wh(100%, 100vh);
 
-    transition: 0.3s all;
+    transition: all 0.3s ease-in-out;
 
     &--max-width {
       max-width: 210px;

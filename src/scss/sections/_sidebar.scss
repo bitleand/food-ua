@@ -4,6 +4,7 @@
   @include position(60px, auto, auto, 240px, fixed);
 
   flex-direction: column;
+  z-index: 5;
 
   &-content {
     @include wh(120px, 120px);

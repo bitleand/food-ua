@@ -13,6 +13,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tab__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_tab__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_timer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/timer */ "./src/js/components/timer.js");
 /* harmony import */ var _components_timer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_timer__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -25,6 +28,59 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 
+
+/***/ }),
+
+/***/ "./src/js/components/modal.js":
+/*!************************************!*\
+  !*** ./src/js/components/modal.js ***!
+  \************************************/
+/***/ (() => {
+
+const modalAttributeOpen = document.querySelectorAll('[data-modal]'),
+      modalAttributeClose = document.querySelector('[data-close]'),
+      modalWindow = document.querySelector('.modal');
+
+const modalClose = () => {
+  modalWindow.classList.add('hide');
+  modalWindow.classList.remove('show');
+  document.body.classList.remove('hidden');
+};
+
+const modalOpen = () => {
+  modalWindow.classList.add('show', 'fade');
+  modalWindow.classList.remove('hide');
+  document.body.classList.add('hidden');
+  clearInterval(modalShowTimer);
+};
+
+const modalShowTimer = () => setTimeout(modalOpen, 5000);
+
+const modalShow = open => {
+  open.forEach(btn => btn.addEventListener('click', modalOpen));
+};
+
+const modalHidden = close => {
+  close.addEventListener('click', modalClose);
+};
+
+const modalHiddenBg = modal => {
+  modal.addEventListener('click', e => e.target === modal ? modalClose() : false);
+};
+
+const modalHiddenEscape = modal => {
+  document.addEventListener('keydown', e => {
+    e.code === 'Escape' && modal.classList.contains('show') ? modalClose() : false;
+  });
+};
+
+modalOpen();
+modalClose();
+modalShowTimer();
+modalShow(modalAttributeOpen, modalWindow);
+modalHidden(modalAttributeClose);
+modalHiddenBg(modalWindow);
+modalHiddenEscape(modalWindow);
 
 /***/ }),
 
