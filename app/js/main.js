@@ -15,6 +15,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_timer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_timer__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/card */ "./src/js/components/card.js");
+/* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_card__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -28,6 +31,42 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 
+
+/***/ }),
+
+/***/ "./src/js/components/card.js":
+/*!***********************************!*\
+  !*** ./src/js/components/card.js ***!
+  \***********************************/
+/***/ (() => {
+
+class cardMenu {
+  constructor(img, alt, title, text, price, parentSelector) {
+    this.img = img;
+    this.alt = alt;
+    this.title = title;
+    this.text = text;
+    this.price = price;
+    this.parent = document.querySelector(parentSelector);
+    this.transfer = 30;
+    this.changeToUAH();
+  }
+
+  changeToUAH() {
+    this.price = this.price * this.transfer;
+  }
+
+  cardRender() {
+    const el = document.createElement('article');
+    el.innerHTML = "\n      <article class=\"card\">\n        <div class=\"card-content\">\n          <img src=".concat(this.img, " class=\"card-content__img\" alt=").concat(this.alt, ">\n          <h3 class=\"card-content__subtitle\">").concat(this.title, "</h3>\n          <p class=\"card-content__text\">").concat(this.text, "</p>\n        </div>\n        <div class=\"card-price\">\n          <span class=\"card-price__subtitle\">\u0426\u0456\u043D\u0430:</span>\n          <p class=\"card-price__total\">\n            <span class=\"card-price__total--num\">").concat(this.price, "</span>\n            \u0433\u0440\u043D/\u0434\u0435\u043D\u044C\n          </p>\n        </div>\n      </article>\n    ");
+    this.parent.append(el);
+  }
+
+}
+
+new cardMenu("img/tabs/vegy.jpg", "vegy", 'Меню "Фітнес"', "\u041C\u0435\u043D\u044E \"\u0424\u0456\u0442\u043D\u0435\u0441\" - \u0446\u0435 \u043D\u043E\u0432\u0438\u0439 \u043F\u0456\u0434\u0445\u0456\u0434 \u0434\u043E \u043F\u0440\u0438\u0433\u043E\u0442\u0443\u0432\u0430\u043D\u043D\u044F \u0441\u0442\u0440\u0430\u0432: \u0431\u0456\u043B\u044C\u0448\u0435 \u0441\u0432\u0456\u0436\u0438\u0445 \u043E\u0432\u043E\u0447\u0456\u0432 \u0442\u0430 \u0444\u0440\u0443\u043A\u0442\u0456\u0432.\n  \u041F\u0440\u043E\u0434\u0443\u043A\u0442 \u0430\u043A\u0442\u0438\u0432\u043D\u0438\u0445 \u0442\u0430 \u0437\u0434\u043E\u0440\u043E\u0432\u0438\u0445 \u043B\u044E\u0434\u0435\u0439. \u0426\u0435 \u0430\u0431\u0441\u043E\u043B\u044E\u0442\u043D\u043E \u043D\u043E\u0432\u0438\u0439 \u043F\u0440\u043E\u0434\u0443\u043A\u0442 \u0437 \u043E\u043F\u0442\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u044E \u0446\u0456\u043D\u043E\u044E \u0442\u0430 \u0432\u0438\u0441\u043E\u043A\u043E\u044E \u044F\u043A\u0456\u0441\u0442\u044E!", 7, '.cards__container').cardRender();
+new cardMenu("img/tabs/elite.jpg", "elite", 'Меню “Преміум”', "\u0423 \u043C\u0435\u043D\u044E \"\u041F\u0440\u0435\u043C\u0456\u0443\u043C\" \u043C\u0438 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u0454\u043C\u043E \u043D\u0435 \u0442\u0456\u043B\u044C\u043A\u0438 \u0433\u0430\u0440\u043D\u0438\u0439 \u0434\u0438\u0437\u0430\u0439\u043D \u0443\u043F\u0430\u043A\u043E\u0432\u043A\u0438, \u0430\u043B\u0435 \u0442\u0430 \u044F\u043A\u0456\u0441\u043D\u0435 \u0432\u0438\u043A\u043E\u043D\u0430\u043D\u043D\u044F \u0441\u0442\u0440\u0430\u0432.\n  \u0427\u0435\u0440\u0432\u043E\u043D\u0430 \u0440\u0438\u0431\u0430, \u043C\u043E\u0440\u0435\u043F\u0440\u043E\u0434\u0443\u043A\u0442\u0438, \u0444\u0440\u0443\u043A\u0442\u0438 \u2013 \u0440\u0435\u0441\u0442\u043E\u0440\u0430\u043D\u043D\u0435 \u043C\u0435\u043D\u044E \u0431\u0435\u0437 \u043F\u043E\u0445\u043E\u0434\u0443 \u0432 \u0440\u0435\u0441\u0442\u043E\u0440\u0430\u043D!", 11, '.cards__container').cardRender();
+new cardMenu("img/tabs/vegy.jpg", "vegy", 'Меню "Пісне"', "\u041C\u0435\u043D\u044E \"\u041F\u0456\u0441\u043D\u0435\" - \u0446\u0435 \u0440\u0435\u0442\u0435\u043B\u044C\u043D\u0438\u0439 \u043F\u0456\u0434\u0431\u0456\u0440 \u0456\u043D\u0433\u0440\u0435\u0434\u0456\u0454\u043D\u0442\u0456\u0432: \u043F\u043E\u0432\u043D\u0430 \u0432\u0456\u0434\u0441\u0443\u0442\u043D\u0456\u0441\u0442\u044C\n  \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u0456\u0432 \u0442\u0432\u0430\u0440\u0438\u043D\u043D\u043E\u0433\u043E \u043F\u043E\u0445\u043E\u0434\u0436\u0435\u043D\u043D\u044F, \u043C\u043E\u043B\u043E\u043A\u043E \u0437 \u043C\u0438\u0433\u0434\u0430\u043B\u044E, \u0432\u0456\u0432\u0441\u0430, \u043A\u043E\u043A\u043E\u0441\u0443 \u0447\u0438 \u0433\u0440\u0435\u0447\u043A\u0438, \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0435\n  \u043A\u0456\u043B\u044C\u043A\u0456\u0441\u0442\u044C \u0431\u0456\u043B\u043A\u0456\u0432 \u0437\u0430 \u0440\u0430\u0445\u0443\u043D\u043E\u043A \u0442\u043E\u0444\u0443 \u0442\u0430 \u0456\u043C\u043F\u043E\u0440\u0442\u043D\u0438\u0445 \u0432\u0435\u0433\u0435\u0442\u0430\u0440\u0456\u0430\u043D\u0441\u044C\u043A\u0438\u0445 \u0441\u0442\u0435\u0439\u043A\u0456\u0432.", 5, '.cards__container').cardRender(); // todo: rewrite in a loop
 
 /***/ }),
 
